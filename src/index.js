@@ -5,6 +5,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import configurations from "./configs/index.js";
 import taskRouter from "./routes/task.routes.js";
+import ErrorHandler from "./middlewares/ErrorHandler.js";
 
 const corsOptions = {
     allowedHeaders: ["Authorization","Content-Type"],
@@ -28,3 +29,5 @@ mongoose.connect("mongodb://localhost:27017/zenkit")
 app.listen(configurations.PORT, () => {
     console.log(`Server is running on port ${configurations.PORT}`);
 })
+
+app.use(ErrorHandler);
