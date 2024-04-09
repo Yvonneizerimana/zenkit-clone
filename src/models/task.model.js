@@ -13,7 +13,7 @@ const TaskSchema = new Schema({
         type: String,
         required: true,
         enum: {
-            values: ["Todo","Progress", "Completed", "Late", "Over-due"],
+            values: ["Todo","In Progress", "Completed", "Late", "Over-due"],
             message: "{VALUE} is not a valid status",
         },
         default: "Todo",
