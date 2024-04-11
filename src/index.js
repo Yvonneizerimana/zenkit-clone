@@ -31,3 +31,5 @@ app.listen(configurations.PORT, () => {
 })
 
 app.use(ErrorHandler);
+const date=new Date();
+console.log(date);
